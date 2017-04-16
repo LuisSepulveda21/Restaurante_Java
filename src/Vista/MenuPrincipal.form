@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[390, 430]"/>
+      <Dimension value="[380, 500]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -133,7 +133,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/desktop-wallpaper-minimalist-background-simple-dark-wallpapers.jpg"/>
+          <Image iconType="3" name="/Imagenes/54a28c7532243d85e8f441bbeb92ffc5.jpg"/>
         </Property>
       </Properties>
       <Constraints>

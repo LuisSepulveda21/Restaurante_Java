@@ -46,24 +46,56 @@ public class FinDelDia extends javax.swing.JFrame {
         MenosVendidoLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         AliLabel = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(388, 415));
+        setPreferredSize(new java.awt.Dimension(397, 390));
+        getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Fin del dia");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(138, 11, 101, 26);
 
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Total de ventas:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(10, 74, 100, 16);
 
+        VentasLabel.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
+        VentasLabel.setForeground(new java.awt.Color(255, 255, 255));
         VentasLabel.setText("jLabel3");
+        getContentPane().add(VentasLabel);
+        VentasLabel.setBounds(37, 95, 60, 20);
 
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Plato mas vendido:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(30, 299, 120, 16);
 
+        PlatoLabel.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        PlatoLabel.setForeground(new java.awt.Color(255, 255, 255));
         PlatoLabel.setText("jLabel5");
+        getContentPane().add(PlatoLabel);
+        PlatoLabel.setBounds(30, 320, 330, 19);
 
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Empleado del mes:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(10, 142, 120, 16);
 
+        CamareroLabel.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
+        CamareroLabel.setForeground(new java.awt.Color(255, 255, 255));
         CamareroLabel.setText("jLabel7");
+        getContentPane().add(CamareroLabel);
+        CamareroLabel.setBounds(29, 168, 60, 20);
 
-        FinMesaTable.setFont(new java.awt.Font("Kartika", 1, 13)); // NOI18N
+        FinMesaTable.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
         FinMesaTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -84,83 +116,36 @@ public class FinDelDia extends javax.swing.JFrame {
         FinMesaTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(FinMesaTable);
 
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(124, 41, 248, 185);
+
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Plato menos vendido:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(30, 245, 130, 16);
 
+        MenosVendidoLabel.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        MenosVendidoLabel.setForeground(new java.awt.Color(255, 255, 255));
         MenosVendidoLabel.setText("jLabel8");
+        getContentPane().add(MenosVendidoLabel);
+        MenosVendidoLabel.setBounds(30, 266, 340, 20);
 
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Alimentos agotados:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(30, 346, 120, 16);
 
+        AliLabel.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        AliLabel.setForeground(new java.awt.Color(255, 255, 255));
         AliLabel.setText("jLabel7");
+        getContentPane().add(AliLabel);
+        AliLabel.setBounds(156, 346, 210, 19);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(37, 37, 37)
-                                .addComponent(VentasLabel))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel6))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(CamareroLabel)))
-                        .addGap(14, 14, 14)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(191, 191, 191)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(MenosVendidoLabel)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4)
-                            .addComponent(PlatoLabel)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(AliLabel)))))
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(VentasLabel)
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(CamareroLabel)
-                        .addGap(43, 43, 43))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MenosVendidoLabel)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PlatoLabel)
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(AliLabel))
-                .addContainerGap(88, Short.MAX_VALUE))
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dark-wood-background-3_opt.jpg"))); // NOI18N
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(-6, -6, 400, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -214,6 +199,7 @@ public class FinDelDia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane3;
     // End of variables declaration//GEN-END:variables
 }

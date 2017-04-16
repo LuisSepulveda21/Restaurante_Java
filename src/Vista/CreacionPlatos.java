@@ -56,22 +56,38 @@ private Controlador Controlador;
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         PrecioTxtField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(556, 355));
+        setPreferredSize(new java.awt.Dimension(556, 320));
+        getContentPane().setLayout(null);
 
+        NombreTxtField.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         NombreTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 NombreTxtFieldKeyReleased(evt);
             }
         });
+        getContentPane().add(NombreTxtField);
+        NombreTxtField.setBounds(75, 72, 134, 21);
 
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 13)); // NOI18N
         jLabel1.setText("Nombre:");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(11, 75, 60, 17);
 
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 22)); // NOI18N
         jLabel2.setText("Creacion de alimentos");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(130, 20, 290, 28);
 
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 13)); // NOI18N
         jLabel3.setText("Tipo:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(230, 70, 40, 17);
 
-        IngredienteTable.setFont(new java.awt.Font("Kartika", 1, 13)); // NOI18N
+        IngredienteTable.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
         IngredienteTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -92,110 +108,75 @@ private Controlador Controlador;
         IngredienteTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(IngredienteTable);
 
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(10, 104, 307, 157);
+
+        AgregarButton.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         AgregarButton.setText("Agregar Ingrediente");
         AgregarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AgregarButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(AgregarButton);
+        AgregarButton.setBounds(372, 129, 141, 23);
 
+        jButton2.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jButton2.setText("Crear alimento");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(123, 279, 111, 23);
 
+        TipoCbox.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         TipoCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Plato", "Bebida", "Postre" }));
+        getContentPane().add(TipoCbox);
+        TipoCbox.setBounds(270, 70, 64, 21);
 
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 13)); // NOI18N
         jLabel4.setText("Unidades:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(355, 173, 70, 17);
 
+        UnidadesTxtField.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        UnidadesTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                UnidadesTxtFieldKeyReleased(evt);
+            }
+        });
+        getContentPane().add(UnidadesTxtField);
+        UnidadesTxtField.setBounds(429, 170, 69, 21);
+
+        jButton3.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jButton3.setText("Actualizar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(373, 279, 87, 23);
 
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 13)); // NOI18N
         jLabel5.setText("Precio:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(380, 70, 44, 17);
 
+        PrecioTxtField.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         PrecioTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 PrecioTxtFieldKeyReleased(evt);
             }
         });
+        getContentPane().add(PrecioTxtField);
+        PrecioTxtField.setBounds(430, 70, 70, 21);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(145, 145, 145)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(NombreTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(23, 23, 23)
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(TipoCbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(42, 42, 42)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AgregarButton)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PrecioTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(UnidadesTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(65, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(96, 96, 96))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel2)
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NombreTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3)
-                    .addComponent(TipoCbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(PrecioTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(AgregarButton)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(UnidadesTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/wooden-wallpaper-6_Easy-Resize.com.jpg"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 560, 320);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -256,6 +237,13 @@ private Controlador Controlador;
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
+     void mostrarAviso(String titulo, String mensaje){
+        JOptionPane.showMessageDialog(this,
+                mensaje,
+                titulo,
+                JOptionPane.PLAIN_MESSAGE);
+    }
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
         
@@ -269,6 +257,7 @@ private Controlador Controlador;
         
         if (Controlador.ObtenerAlimento(nombre)!=null) {
             Controlador.ObtenerAlimento(nombre).setNumero();
+            mostrarAviso("Unidades agregadas","Se han agregado unidades de su platillo");
         }
         else{
             try {
@@ -276,6 +265,7 @@ private Controlador Controlador;
             } catch (IOException ex) {
                 Logger.getLogger(CreacionPlatos.class.getName()).log(Level.SEVERE, null, ex);
             }
+             mostrarAviso("Plato creado","Su plato ha sido creado satisfactoriamente");
         }
         
         
@@ -285,18 +275,17 @@ private Controlador Controlador;
     private void NombreTxtFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NombreTxtFieldKeyReleased
         
         if(NombreTxtField.getText().length() != 0 && PrecioTxtField.getText().length() != 0){
-        AgregarButton.setEnabled(true);
         UnidadesTxtField.setEditable(true);
         }
         else{
-        AgregarButton.setEnabled(false);
+        AgregarButton.setEnabled(false);    
         UnidadesTxtField.setEditable(false);
         }
     }//GEN-LAST:event_NombreTxtFieldKeyReleased
 
     private void PrecioTxtFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PrecioTxtFieldKeyReleased
        if(NombreTxtField.getText().length() != 0 && PrecioTxtField.getText().length() != 0){
-        AgregarButton.setEnabled(true);
+        
         UnidadesTxtField.setEditable(true);
         }
         else{
@@ -304,6 +293,12 @@ private Controlador Controlador;
         UnidadesTxtField.setEditable(false);
         }
     }//GEN-LAST:event_PrecioTxtFieldKeyReleased
+
+    private void UnidadesTxtFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UnidadesTxtFieldKeyReleased
+        if(UnidadesTxtField.getText().length() != 0){
+        AgregarButton.setEnabled(true);
+        } 
+    }//GEN-LAST:event_UnidadesTxtFieldKeyReleased
 
     /**
      * @param args the command line arguments
@@ -355,6 +350,7 @@ private Controlador Controlador;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane3;
     // End of variables declaration//GEN-END:variables
 }

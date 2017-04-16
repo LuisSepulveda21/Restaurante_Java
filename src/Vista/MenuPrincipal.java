@@ -59,7 +59,7 @@ FinDelDia=new FinDelDia(Controlador);
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(390, 430));
+        setMinimumSize(new java.awt.Dimension(380, 500));
         getContentPane().setLayout(null);
 
         CamareroButton.setBackground(new java.awt.Color(204, 204, 204));
@@ -126,7 +126,7 @@ FinDelDia=new FinDelDia(Controlador);
         getContentPane().add(jButton6);
         jButton6.setBounds(20, 310, 290, 70);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/desktop-wallpaper-minimalist-background-simple-dark-wallpapers.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/54a28c7532243d85e8f441bbeb92ffc5.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-20, -370, 800, 840);
 

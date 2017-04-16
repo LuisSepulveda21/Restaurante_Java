@@ -103,6 +103,9 @@
   <SubComponents>
     <Component class="javax.swing.JComboBox" name="MesaCbox">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Century Gothic" size="11" style="1"/>
+        </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="20">
             <StringItem index="0" value="1"/>
@@ -174,6 +177,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="FacturaButton">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Century Gothic" size="11" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Solicitar factura"/>
       </Properties>
       <Events>
@@ -187,6 +193,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="CambiarPedido">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Century Gothic" size="11" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Reiniciar Pedido"/>
       </Properties>
       <Events>
@@ -201,7 +210,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/dark-wood-background-3_opt.jpg"/>
+          <Image iconType="3" name="/Imagenes/rsz_lollipop-wallpapers-hd.png"/>
         </Property>
       </Properties>
       <Constraints>

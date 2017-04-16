@@ -81,6 +81,7 @@ private Controlador Controlador;
         setMinimumSize(new java.awt.Dimension(357, 307));
         getContentPane().setLayout(null);
 
+        MesaCbox.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         MesaCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
         MesaCbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +89,7 @@ private Controlador Controlador;
             }
         });
         getContentPane().add(MesaCbox);
-        MesaCbox.setBounds(140, 130, 50, 20);
+        MesaCbox.setBounds(140, 130, 50, 21);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,6 +103,7 @@ private Controlador Controlador;
         getContentPane().add(jLabel2);
         jLabel2.setBounds(90, 10, 150, 90);
 
+        FacturaButton.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         FacturaButton.setText("Solicitar factura");
         FacturaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +113,7 @@ private Controlador Controlador;
         getContentPane().add(FacturaButton);
         FacturaButton.setBounds(20, 200, 130, 23);
 
+        CambiarPedido.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         CambiarPedido.setText("Reiniciar Pedido");
         CambiarPedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +123,7 @@ private Controlador Controlador;
         getContentPane().add(CambiarPedido);
         CambiarPedido.setBounds(190, 200, 130, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dark-wood-background-3_opt.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/rsz_lollipop-wallpapers-hd.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 360, 310);
 
@@ -196,7 +199,7 @@ mostrarError("Error", "No puede solicitar factura ");
             
         Controlador.reset(mesa);
         mesa.setVentas(0);
-        mostrarAviso("PEDIDOS BORRADOS SATISFACTORIAMENTE","Dirijase a tomar pedido e ingrese sus nuevos pedidos");
+        mostrarAviso("PEDIDOS BORRADOS ","Dirijase a tomar pedido e ingrese sus nuevos pedidos");
         }
         
         }

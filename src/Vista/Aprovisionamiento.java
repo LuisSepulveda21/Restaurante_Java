@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import static java.lang.Integer.parseInt;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -46,6 +47,7 @@ public class Aprovisionamiento extends javax.swing.JFrame {
         UnidadesTxtField = new javax.swing.JTextField();
         AgregarButton2 = new javax.swing.JButton();
         IngredienteTxtField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         Titulo1 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         AlmacenTable = new javax.swing.JTable();
@@ -54,13 +56,21 @@ public class Aprovisionamiento extends javax.swing.JFrame {
         Background1 = new javax.swing.JLabel();
 
         Agregar.setMinimumSize(new java.awt.Dimension(430, 210));
+        Agregar.getContentPane().setLayout(null);
 
-        UnidadJlabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        UnidadJlabel.setText("Unidades disponibles en fabrica:");
+        UnidadJlabel.setFont(new java.awt.Font("Century Gothic", 1, 13)); // NOI18N
+        UnidadJlabel.setForeground(new java.awt.Color(255, 255, 255));
+        UnidadJlabel.setText("Unidades disponibles:");
+        Agregar.getContentPane().add(UnidadJlabel);
+        UnidadJlabel.setBounds(41, 55, 170, 17);
 
-        IngredienteJlabel.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        IngredienteJlabel.setFont(new java.awt.Font("Century Gothic", 1, 13)); // NOI18N
+        IngredienteJlabel.setForeground(new java.awt.Color(255, 255, 255));
         IngredienteJlabel.setText("Ingrediente:");
+        Agregar.getContentPane().add(IngredienteJlabel);
+        IngredienteJlabel.setBounds(41, 15, 79, 17);
 
+        UnidadesTxtField.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         UnidadesTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UnidadesTxtFieldActionPerformed(evt);
@@ -71,63 +81,43 @@ public class Aprovisionamiento extends javax.swing.JFrame {
                 UnidadesTxtFieldKeyTyped(evt);
             }
         });
+        Agregar.getContentPane().add(UnidadesTxtField);
+        UnidadesTxtField.setBounds(241, 53, 157, 21);
 
+        AgregarButton2.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         AgregarButton2.setText("Agregar");
         AgregarButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AgregarButton2ActionPerformed(evt);
             }
         });
+        Agregar.getContentPane().add(AgregarButton2);
+        AgregarButton2.setBounds(154, 107, 77, 23);
 
+        IngredienteTxtField.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         IngredienteTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 IngredienteTxtFieldKeyTyped(evt);
             }
         });
+        Agregar.getContentPane().add(IngredienteTxtField);
+        IngredienteTxtField.setBounds(241, 14, 157, 21);
 
-        javax.swing.GroupLayout AgregarLayout = new javax.swing.GroupLayout(Agregar.getContentPane());
-        Agregar.getContentPane().setLayout(AgregarLayout);
-        AgregarLayout.setHorizontalGroup(
-            AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(AgregarButton2)
-                    .addGroup(AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(UnidadJlabel)
-                        .addComponent(IngredienteJlabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(UnidadesTxtField, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
-                    .addComponent(IngredienteTxtField))
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
-        AgregarLayout.setVerticalGroup(
-            AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(IngredienteJlabel)
-                    .addComponent(IngredienteTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(UnidadJlabel)
-                    .addComponent(UnidadesTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addComponent(AgregarButton2)
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Parkett-Fischgrät.jpg"))); // NOI18N
+        Agregar.getContentPane().add(jLabel1);
+        jLabel1.setBounds(-6, -6, 430, 160);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(449, 400));
+        setMinimumSize(new java.awt.Dimension(410, 400));
         getContentPane().setLayout(null);
 
-        Titulo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Titulo1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        Titulo1.setForeground(new java.awt.Color(255, 255, 255));
         Titulo1.setText("Sistema de registro de ingredientes");
         getContentPane().add(Titulo1);
-        Titulo1.setBounds(29, 25, 318, 22);
+        Titulo1.setBounds(29, 25, 309, 23);
 
-        AlmacenTable.setFont(new java.awt.Font("Kartika", 1, 13)); // NOI18N
+        AlmacenTable.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
         AlmacenTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -155,7 +145,7 @@ public class Aprovisionamiento extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(10, 53, 366, 208);
 
-        AgregarButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        AgregarButton.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         AgregarButton.setText("Agregar");
         AgregarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,8 +153,9 @@ public class Aprovisionamiento extends javax.swing.JFrame {
             }
         });
         getContentPane().add(AgregarButton);
-        AgregarButton.setBounds(40, 290, 79, 23);
+        AgregarButton.setBounds(40, 290, 77, 23);
 
+        jButton1.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jButton1.setText("Enviar a Creacion");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +164,8 @@ public class Aprovisionamiento extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(200, 290, 130, 23);
+
+        Background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Parkett-Fischgrät.jpg"))); // NOI18N
         getContentPane().add(Background1);
         Background1.setBounds(0, 0, 400, 400);
 
@@ -229,6 +222,15 @@ public class Aprovisionamiento extends javax.swing.JFrame {
 
     }//GEN-LAST:event_IngredienteTxtFieldKeyTyped
 
+    void mostrarAviso(String titulo, String mensaje){
+        JOptionPane.showMessageDialog(this,
+                mensaje,
+                titulo,
+                JOptionPane.PLAIN_MESSAGE);
+    }
+    
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
    int fila=AlmacenTable.getRowCount();
   DefaultTableModel model = (DefaultTableModel) AlmacenTable.getModel();
@@ -238,7 +240,7 @@ public class Aprovisionamiento extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(Aprovisionamiento.class.getName()).log(Level.SEVERE, null, ex);
             }
- 
+ mostrarAviso("Ingredientes enviados","Puede proceder a crear alimentos con los ingredientes en creacion de platos");
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -296,6 +298,7 @@ public class Aprovisionamiento extends javax.swing.JFrame {
     private javax.swing.JLabel UnidadJlabel;
     private javax.swing.JTextField UnidadesTxtField;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane3;
     // End of variables declaration//GEN-END:variables
 }
