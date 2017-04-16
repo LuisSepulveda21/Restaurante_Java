@@ -1,0 +1,4 @@
+Queso,18
+Arroz,2
+Trigo,16
+Sal,78

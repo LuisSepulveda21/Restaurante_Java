@@ -1,0 +1,15 @@
+Plato,2000,Pasta,5
+Plato,3000,Taco,5
+Plato,4000,Perro,5
+Plato,500,Pizza,5
+Plato,6000,Pollo,3
+Postre,200,Creme brule,5
+Postre,1000,Napoleon,5
+Postre,700,Brownie,3
+Postre,300,Leche asada,5
+Postre,800,Merengon,5
+Bebida,1200,Coca cola,5
+Bebida,230,Jugo hit,5
+Bebida,50,Limonada,5
+Bebida,100,Cerveza,5
+Bebida,450,Colombiana,5
