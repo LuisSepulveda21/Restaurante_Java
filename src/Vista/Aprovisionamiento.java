@@ -6,10 +6,7 @@
 package Vista;
 
 import Controlador.Controlador;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import static java.lang.Double.parseDouble;
-import static java.lang.Integer.parseInt;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
@@ -24,11 +21,11 @@ public class Aprovisionamiento extends javax.swing.JFrame {
 
     public Controlador Controlador;
     public CreacionPlatos CreacionPlatos;
-    
-    public Aprovisionamiento(Controlador Controlador,CreacionPlatos CreacionPlatos) throws IOException {
-        
-         this.Controlador=Controlador;
-         this.CreacionPlatos=CreacionPlatos;
+
+    public Aprovisionamiento(Controlador Controlador, CreacionPlatos CreacionPlatos) throws IOException {
+
+        this.Controlador = Controlador;
+        this.CreacionPlatos = CreacionPlatos;
         initComponents();
     }
 
@@ -55,17 +52,15 @@ public class Aprovisionamiento extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         Background1 = new javax.swing.JLabel();
 
-        Agregar.setMinimumSize(new java.awt.Dimension(430, 210));
+        Agregar.setMinimumSize(new java.awt.Dimension(430, 200));
         Agregar.getContentPane().setLayout(null);
 
         UnidadJlabel.setFont(new java.awt.Font("Century Gothic", 1, 13)); // NOI18N
-        UnidadJlabel.setForeground(new java.awt.Color(255, 255, 255));
         UnidadJlabel.setText("Unidades disponibles:");
         Agregar.getContentPane().add(UnidadJlabel);
         UnidadJlabel.setBounds(41, 55, 170, 17);
 
         IngredienteJlabel.setFont(new java.awt.Font("Century Gothic", 1, 13)); // NOI18N
-        IngredienteJlabel.setForeground(new java.awt.Color(255, 255, 255));
         IngredienteJlabel.setText("Ingrediente:");
         Agregar.getContentPane().add(IngredienteJlabel);
         IngredienteJlabel.setBounds(41, 15, 79, 17);
@@ -103,16 +98,15 @@ public class Aprovisionamiento extends javax.swing.JFrame {
         Agregar.getContentPane().add(IngredienteTxtField);
         IngredienteTxtField.setBounds(241, 14, 157, 21);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Parkett-Fischgrät.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/depositphotos_23928845-stock-photo-green-pastel-background-design.jpg"))); // NOI18N
         Agregar.getContentPane().add(jLabel1);
-        jLabel1.setBounds(-6, -6, 430, 160);
+        jLabel1.setBounds(-300, -190, 830, 580);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(410, 400));
         getContentPane().setLayout(null);
 
         Titulo1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        Titulo1.setForeground(new java.awt.Color(255, 255, 255));
         Titulo1.setText("Sistema de registro de ingredientes");
         getContentPane().add(Titulo1);
         Titulo1.setBounds(29, 25, 309, 23);
@@ -165,7 +159,7 @@ public class Aprovisionamiento extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(200, 290, 130, 23);
 
-        Background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Parkett-Fischgrät.jpg"))); // NOI18N
+        Background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/depositphotos_23928845-stock-photo-green-pastel-background-design.jpg"))); // NOI18N
         getContentPane().add(Background1);
         Background1.setBounds(0, 0, 400, 400);
 
@@ -173,8 +167,6 @@ public class Aprovisionamiento extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AgregarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarButtonActionPerformed
-
-
 
         IngredienteTxtField.setText("");
         UnidadesTxtField.setText("");
@@ -186,8 +178,8 @@ public class Aprovisionamiento extends javax.swing.JFrame {
     }//GEN-LAST:event_UnidadesTxtFieldActionPerformed
 
     private void UnidadesTxtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UnidadesTxtFieldKeyTyped
-        char c=evt.getKeyChar();
-        if(Character.isLetter(c)) {
+        char c = evt.getKeyChar();
+        if (Character.isLetter(c)) {
             getToolkit().beep();
             evt.consume();
         }
@@ -195,25 +187,21 @@ public class Aprovisionamiento extends javax.swing.JFrame {
 
     private void AgregarButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarButton2ActionPerformed
 
-        
-            DefaultTableModel model = (DefaultTableModel) AlmacenTable.getModel();
-            
-            int unidades = parseInt(UnidadesTxtField.getText());
-            String nombre=IngredienteTxtField.getText();
-            model.addRow(new Object[]{nombre,unidades});
-            Agregar.setVisible(false);
-            
-        
-      
-        
-        
+        DefaultTableModel model = (DefaultTableModel) AlmacenTable.getModel();
+
+        int unidades = parseInt(UnidadesTxtField.getText());
+        String nombre = IngredienteTxtField.getText();
+        model.addRow(new Object[]{nombre, unidades});
+        Agregar.setVisible(false);
+
+
     }//GEN-LAST:event_AgregarButton2ActionPerformed
 
     private void IngredienteTxtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_IngredienteTxtFieldKeyTyped
 
-        char c=evt.getKeyChar();
+        char c = evt.getKeyChar();
 
-        if(Character.isDigit(c)) {
+        if (Character.isDigit(c)) {
             getToolkit().beep();
 
             evt.consume();
@@ -222,25 +210,24 @@ public class Aprovisionamiento extends javax.swing.JFrame {
 
     }//GEN-LAST:event_IngredienteTxtFieldKeyTyped
 
-    void mostrarAviso(String titulo, String mensaje){
+    void mostrarAviso(String titulo, String mensaje) {
         JOptionPane.showMessageDialog(this,
                 mensaje,
                 titulo,
                 JOptionPane.PLAIN_MESSAGE);
     }
-    
-    
-    
+
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-   int fila=AlmacenTable.getRowCount();
-  DefaultTableModel model = (DefaultTableModel) AlmacenTable.getModel();
-    
-            try {
-                Controlador.AgregarIngredientesAlmacen(model,fila);
-            } catch (IOException ex) {
-                Logger.getLogger(Aprovisionamiento.class.getName()).log(Level.SEVERE, null, ex);
-            }
- mostrarAviso("Ingredientes enviados","Puede proceder a crear alimentos con los ingredientes en creacion de platos");
+        int fila = AlmacenTable.getRowCount();
+        DefaultTableModel model = (DefaultTableModel) AlmacenTable.getModel();
+
+        try {
+            Controlador.AgregarIngredientesAlmacen(model, fila);
+        } catch (IOException ex) {
+            Logger.getLogger(Aprovisionamiento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        mostrarAviso("Ingredientes enviados", "Puede proceder a crear alimentos con los ingredientes en creacion de platos");
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -276,9 +263,9 @@ public class Aprovisionamiento extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    Controlador c=null;
-                    CreacionPlatos k=null;
-                    new Aprovisionamiento(c,k).setVisible(true);
+                    Controlador c = null;
+                    CreacionPlatos k = null;
+                    new Aprovisionamiento(c, k).setVisible(true);
                 } catch (IOException ex) {
                     Logger.getLogger(Aprovisionamiento.class.getName()).log(Level.SEVERE, null, ex);
                 }

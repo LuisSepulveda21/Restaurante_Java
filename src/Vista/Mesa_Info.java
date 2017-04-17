@@ -13,24 +13,26 @@ import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author Luis Sepulveda
  */
 public class Mesa_Info extends javax.swing.JFrame {
-private Controlador Controlador;
+
+    private Controlador Controlador;
+
     /**
      * Creates new form Mesa_Info
+     *
      * @param Controlador
      * @throws java.io.IOException
      */
     public Mesa_Info(Controlador Controlador) throws IOException {
-         initComponents();
+        initComponents();
         DefaultListModel model = new DefaultListModel();
         lista.setModel(model);
-        this.Controlador=Controlador;
-       
+        this.Controlador = Controlador;
+
     }
 
     /**
@@ -92,13 +94,11 @@ private Controlador Controlador;
         MesaCbox.setBounds(140, 130, 50, 21);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 15)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("#Mesa");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(80, 130, 50, 21);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 30)); // NOI18N
         jLabel2.setText("InfoMesa");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(90, 10, 150, 90);
@@ -123,9 +123,9 @@ private Controlador Controlador;
         getContentPane().add(CambiarPedido);
         CambiarPedido.setBounds(190, 200, 130, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/rsz_lollipop-wallpapers-hd.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/depositphotos_23928845-stock-photo-green-pastel-background-design.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 360, 310);
+        jLabel1.setBounds(-260, -70, 900, 480);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -134,80 +134,67 @@ private Controlador Controlador;
         // TODO add your handling code here:
     }//GEN-LAST:event_MesaCboxActionPerformed
 
-    
-    
-    void mostrarError(String titulo, String mensaje){
+    void mostrarError(String titulo, String mensaje) {
         JOptionPane.showMessageDialog(this,
                 mensaje,
                 titulo,
                 JOptionPane.ERROR_MESSAGE);
     }
-    
-    void mostrarAviso(String titulo, String mensaje){
+
+    void mostrarAviso(String titulo, String mensaje) {
         JOptionPane.showMessageDialog(this,
                 mensaje,
                 titulo,
                 JOptionPane.PLAIN_MESSAGE);
     }
-    
-    
+
+
     private void FacturaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FacturaButtonActionPerformed
-       
-        
-  
-       Mesa mesa;
-       int valor=Integer.parseInt((String)MesaCbox.getSelectedItem());
-       mesa=Controlador.ObtenerMesa(valor);
-       
-    
 
-    if (mesa.getProceso()==1)
-{
-     DefaultListModel model = (DefaultListModel) lista.getModel();
-     model.clear();
-     
-        for (int i = 0; i < mesa.getPedidos().size(); i++) {
-            model.addElement(mesa.getPedidos().getPedidoYPrecio(i));
+        Mesa mesa;
+        int valor = Integer.parseInt((String) MesaCbox.getSelectedItem());
+        mesa = Controlador.ObtenerMesa(valor);
+
+        if (mesa.getProceso() == 1) {
+            DefaultListModel model = (DefaultListModel) lista.getModel();
+            model.clear();
+
+            for (int i = 0; i < mesa.getPedidos().size(); i++) {
+                model.addElement(mesa.getPedidos().getPedidoYPrecio(i));
+            }
+
+            model.addElement("TOTAL = " + mesa.getTotal());
+            model.addElement("IVA = " + mesa.getTotal() * 0.19);
+            model.addElement("PROPINA = " + mesa.getTotal() * 0.1);
+            Controlador.reset(mesa);
+            Factura.setVisible(true);
+
+        } else {
+            mostrarError("Error", "No puede solicitar factura ");
+
         }
-           
-        model.addElement("TOTAL = "+mesa.getTotal());
-        model.addElement("IVA = "+ mesa.getTotal()*0.19);
-        model.addElement("PROPINA = "+mesa.getTotal()*0.1);
-    Controlador.reset(mesa);
-        Factura.setVisible(true);
-
-
-    }                                             
-else{
-mostrarError("Error", "No puede solicitar factura ");
-
-}
     }//GEN-LAST:event_FacturaButtonActionPerformed
 
     private void CambiarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarPedidoActionPerformed
-      
-        
+
         Mesa mesa;
-        int valor=Integer.parseInt((String)MesaCbox.getSelectedItem());
-        mesa=Controlador.ObtenerMesa(valor);
-        
-        if (mesa.getProceso()==1){ 
-        if (Controlador.Tiempo()-Controlador.time> 10000) {
-            mostrarError("Tiempo agotado", "Usted no puede cambiar el pedido ");
+        int valor = Integer.parseInt((String) MesaCbox.getSelectedItem());
+        mesa = Controlador.ObtenerMesa(valor);
+
+        if (mesa.getProceso() == 1) {
+            if (Controlador.Tiempo() - Controlador.time > 10000) {
+                mostrarError("Tiempo agotado", "Usted no puede cambiar el pedido ");
+            } else {
+
+                Controlador.reset(mesa);
+                mesa.setVentas(0);
+                mostrarAviso("PEDIDOS BORRADOS ", "Dirijase a tomar pedido e ingrese sus nuevos pedidos");
+            }
+
+        } else {
+            mostrarError("Error", "No puede solicitar cambio de pedido ");
         }
-        else{
-            
-        Controlador.reset(mesa);
-        mesa.setVentas(0);
-        mostrarAviso("PEDIDOS BORRADOS ","Dirijase a tomar pedido e ingrese sus nuevos pedidos");
-        }
-        
-        }
-        
-        else{
-       mostrarError("Error", "No puede solicitar cambio de pedido "); 
-        }
-        
+
     }//GEN-LAST:event_CambiarPedidoActionPerformed
 
     /**
@@ -241,7 +228,7 @@ mostrarError("Error", "No puede solicitar factura ");
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    Controlador c=null;
+                    Controlador c = null;
                     new Mesa_Info(c).setVisible(true);
                 } catch (IOException ex) {
                     Logger.getLogger(Mesa_Info.class.getName()).log(Level.SEVERE, null, ex);

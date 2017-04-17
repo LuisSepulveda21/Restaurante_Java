@@ -20,19 +20,13 @@ public class TomarPedidos extends javax.swing.JFrame {
 
     private Controlador Controlador;
     public Cocina cocina;
-    
-    public TomarPedidos(Controlador Controlador,Cocina Cocina) throws IOException {
-        this.Controlador=Controlador;
-         this.cocina=Cocina;
-         
+
+    public TomarPedidos(Controlador Controlador, Cocina Cocina) throws IOException {
+        this.Controlador = Controlador;
+        this.cocina = Cocina;
+
         initComponents();
     }
-    
-     
-      
-    
-    
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -270,10 +264,9 @@ public class TomarPedidos extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         TituloTomaDePedidosLabel.setFont(new java.awt.Font("Century Gothic", 1, 23)); // NOI18N
-        TituloTomaDePedidosLabel.setForeground(new java.awt.Color(255, 255, 255));
         TituloTomaDePedidosLabel.setText("Toma de Pedidos");
         getContentPane().add(TituloTomaDePedidosLabel);
-        TituloTomaDePedidosLabel.setBounds(160, 80, 210, 30);
+        TituloTomaDePedidosLabel.setBounds(160, 20, 210, 30);
 
         CamareroCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
         CamareroCbox.addActionListener(new java.awt.event.ActionListener() {
@@ -282,23 +275,21 @@ public class TomarPedidos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CamareroCbox);
-        CamareroCbox.setBounds(30, 120, 50, 20);
+        CamareroCbox.setBounds(30, 80, 50, 20);
 
         MesaCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
         getContentPane().add(MesaCbox);
-        MesaCbox.setBounds(440, 120, 50, 20);
+        MesaCbox.setBounds(440, 80, 50, 20);
 
         CamareroLabel.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        CamareroLabel.setForeground(new java.awt.Color(255, 255, 255));
         CamareroLabel.setText("Camarero");
         getContentPane().add(CamareroLabel);
-        CamareroLabel.setBounds(10, 90, 69, 19);
+        CamareroLabel.setBounds(20, 50, 69, 19);
 
         MesaLabel.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        MesaLabel.setForeground(new java.awt.Color(255, 255, 255));
         MesaLabel.setText("Mesa");
         getContentPane().add(MesaLabel);
-        MesaLabel.setBounds(440, 90, 50, 19);
+        MesaLabel.setBounds(440, 50, 50, 19);
 
         PostresButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icono3_.png"))); // NOI18N
         PostresButton.addActionListener(new java.awt.event.ActionListener() {
@@ -307,7 +298,7 @@ public class TomarPedidos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(PostresButton);
-        PostresButton.setBounds(160, 380, 80, 30);
+        PostresButton.setBounds(150, 340, 80, 30);
 
         PlatosButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icono2_.png"))); // NOI18N
         PlatosButton.setText("Platos");
@@ -320,7 +311,7 @@ public class TomarPedidos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(PlatosButton);
-        PlatosButton.setBounds(70, 380, 70, 30);
+        PlatosButton.setBounds(50, 340, 70, 30);
 
         BebidasButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icono4_.png"))); // NOI18N
         BebidasButton.addActionListener(new java.awt.event.ActionListener() {
@@ -329,7 +320,7 @@ public class TomarPedidos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(BebidasButton);
-        BebidasButton.setBounds(260, 380, 80, 30);
+        BebidasButton.setBounds(260, 340, 80, 30);
 
         SalirMenuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icono1_.png"))); // NOI18N
         SalirMenuButton.setText("Realizar pedido");
@@ -342,7 +333,7 @@ public class TomarPedidos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(SalirMenuButton);
-        SalirMenuButton.setBounds(360, 380, 120, 30);
+        SalirMenuButton.setBounds(360, 340, 120, 30);
 
         InfoTable.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         InfoTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -366,11 +357,11 @@ public class TomarPedidos extends javax.swing.JFrame {
         jScrollPane6.setViewportView(InfoTable);
 
         getContentPane().add(jScrollPane6);
-        jScrollPane6.setBounds(70, 150, 366, 208);
+        jScrollPane6.setBounds(70, 110, 366, 208);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/54a28c7532243d85e8f441bbeb92ffc5.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/depositphotos_23928845-stock-photo-green-pastel-background-design.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 560, 470);
+        jLabel1.setBounds(-190, -10, 780, 470);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -380,131 +371,116 @@ public class TomarPedidos extends javax.swing.JFrame {
     }//GEN-LAST:event_PostresButtonActionPerformed
 
     private void ComprarButtonPlaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComprarButtonPlaActionPerformed
-   
-         int fila = PlatosTable.getSelectedRow();
-      
-       
-if(fila!=-1){      
-DefaultTableModel model = (DefaultTableModel) PlatosTable.getModel();
-DefaultTableModel model2=(DefaultTableModel) InfoTable.getModel();
 
+        int fila = PlatosTable.getSelectedRow();
 
-String nombre=model.getValueAt(fila,0).toString();
-double precio=Double.valueOf((String) model.getValueAt(fila, 1));
-int camarero=Integer.parseInt((String)CamareroCbox.getSelectedItem());
-int mesa=Integer.parseInt((String)MesaCbox.getSelectedItem());
+        if (fila != -1) {
+            DefaultTableModel model = (DefaultTableModel) PlatosTable.getModel();
+            DefaultTableModel model2 = (DefaultTableModel) InfoTable.getModel();
 
-             try {
-                 Controlador.AgregarPedido(nombre,camarero,mesa,precio,model2,model,fila);
-             } catch (IOException ex) {
-                 Logger.getLogger(TomarPedidos.class.getName()).log(Level.SEVERE, null, ex);
-             }
+            String nombre = model.getValueAt(fila, 0).toString();
+            double precio = Double.valueOf((String) model.getValueAt(fila, 1));
+            int camarero = Integer.parseInt((String) CamareroCbox.getSelectedItem());
+            int mesa = Integer.parseInt((String) MesaCbox.getSelectedItem());
 
-            
-            
+            try {
+                Controlador.AgregarPedido(nombre, camarero, mesa, precio, model2, model, fila);
+            } catch (IOException ex) {
+                Logger.getLogger(TomarPedidos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
             PlatosTable.clearSelection();
 
-            
-            
-}
+        }
     }//GEN-LAST:event_ComprarButtonPlaActionPerformed
 
     private void SalirButtonPlaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirButtonPlaActionPerformed
-     PlatosFrame.setVisible(false);
+        PlatosFrame.setVisible(false);
     }//GEN-LAST:event_SalirButtonPlaActionPerformed
 
     private void PlatosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlatosButtonActionPerformed
-       PlatosFrame.setVisible(true);
+        PlatosFrame.setVisible(true);
     }//GEN-LAST:event_PlatosButtonActionPerformed
 
     private void BebidasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BebidasButtonActionPerformed
-       BebidasFrame.setVisible(true);
+        BebidasFrame.setVisible(true);
     }//GEN-LAST:event_BebidasButtonActionPerformed
 
     private void ComprarButtonPosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComprarButtonPosActionPerformed
-        
-         int fila = PostresTable.getSelectedRow();
-       System.out.println(fila);
-      
-       
-if(fila!=-1){      
-DefaultTableModel model = (DefaultTableModel) PostresTable.getModel();
-DefaultTableModel model2=(DefaultTableModel) InfoTable.getModel();
 
+        int fila = PostresTable.getSelectedRow();
+        System.out.println(fila);
 
-String nombre=model.getValueAt(fila,0).toString();
-double precio=Double.valueOf((String) model.getValueAt(fila, 1));
-int camarero=Integer.parseInt((String)CamareroCbox.getSelectedItem());
-int mesa=Integer.parseInt((String)MesaCbox.getSelectedItem());
+        if (fila != -1) {
+            DefaultTableModel model = (DefaultTableModel) PostresTable.getModel();
+            DefaultTableModel model2 = (DefaultTableModel) InfoTable.getModel();
 
+            String nombre = model.getValueAt(fila, 0).toString();
+            double precio = Double.valueOf((String) model.getValueAt(fila, 1));
+            int camarero = Integer.parseInt((String) CamareroCbox.getSelectedItem());
+            int mesa = Integer.parseInt((String) MesaCbox.getSelectedItem());
 
-             try {
-                 Controlador.AgregarPedido(nombre,camarero,mesa,precio,model2,model,fila);
-             } catch (IOException ex) {
-                 Logger.getLogger(TomarPedidos.class.getName()).log(Level.SEVERE, null, ex);
-             }
+            try {
+                Controlador.AgregarPedido(nombre, camarero, mesa, precio, model2, model, fila);
+            } catch (IOException ex) {
+                Logger.getLogger(TomarPedidos.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
-            
             PostresTable.clearSelection();
-}
-        
+        }
+
     }//GEN-LAST:event_ComprarButtonPosActionPerformed
 
     private void SalirButtonPosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirButtonPosActionPerformed
-       PostresFrame.setVisible(false);
+        PostresFrame.setVisible(false);
     }//GEN-LAST:event_SalirButtonPosActionPerformed
 
     private void ComprarButtonBeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComprarButtonBeActionPerformed
-         int fila = BebidasTable.getSelectedRow();
-       System.out.println(fila);
-      
-       
-if(fila!=-1){      
-DefaultTableModel model = (DefaultTableModel) BebidasTable.getModel();
-DefaultTableModel model2=(DefaultTableModel) InfoTable.getModel();
+        int fila = BebidasTable.getSelectedRow();
+        System.out.println(fila);
 
+        if (fila != -1) {
+            DefaultTableModel model = (DefaultTableModel) BebidasTable.getModel();
+            DefaultTableModel model2 = (DefaultTableModel) InfoTable.getModel();
 
-String nombre=model.getValueAt(fila,0).toString();
-double precio=Double.valueOf((String) model.getValueAt(fila, 1));
-int camarero=Integer.parseInt((String)CamareroCbox.getSelectedItem());
-int mesa=Integer.parseInt((String)MesaCbox.getSelectedItem());
+            String nombre = model.getValueAt(fila, 0).toString();
+            double precio = Double.valueOf((String) model.getValueAt(fila, 1));
+            int camarero = Integer.parseInt((String) CamareroCbox.getSelectedItem());
+            int mesa = Integer.parseInt((String) MesaCbox.getSelectedItem());
 
-             try {
-                 Controlador.AgregarPedido(nombre,camarero,mesa,precio,model2,model,fila);
-             } catch (IOException ex) {
-                 Logger.getLogger(TomarPedidos.class.getName()).log(Level.SEVERE, null, ex);
-             }
-            
+            try {
+                Controlador.AgregarPedido(nombre, camarero, mesa, precio, model2, model, fila);
+            } catch (IOException ex) {
+                Logger.getLogger(TomarPedidos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
             BebidasTable.clearSelection();
-}
+        }
     }//GEN-LAST:event_ComprarButtonBeActionPerformed
 
-    
-    public void mostrarError(String titulo, String mensaje){
+    public void mostrarError(String titulo, String mensaje) {
         JOptionPane.showMessageDialog(this,
                 mensaje,
                 titulo,
                 JOptionPane.ERROR_MESSAGE);
     }
-    
-    
+
+
     private void SalirButtonBeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirButtonBeActionPerformed
         BebidasFrame.setVisible(false);
     }//GEN-LAST:event_SalirButtonBeActionPerformed
 
     private void SalirMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirMenuButtonActionPerformed
- 
-        
-  int fila=InfoTable.getRowCount();
-   
-      
-        for (int i = 0; i < fila-1; i++) {
+
+        int fila = InfoTable.getRowCount();
+
+        for (int i = 0; i < fila - 1; i++) {
             System.out.println("as");
-            for (int j = i+1; j<fila ; j++) {
+            for (int j = i + 1; j < fila; j++) {
                 System.out.println("assss");
-                if ((int) InfoTable.getValueAt(i,0)==((int) InfoTable.getValueAt(j,0))) {
-                  ((DefaultTableModel)InfoTable.getModel()).removeRow(j);
-                  fila=InfoTable.getRowCount();
+                if ((int) InfoTable.getValueAt(i, 0) == ((int) InfoTable.getValueAt(j, 0))) {
+                    ((DefaultTableModel) InfoTable.getModel()).removeRow(j);
+                    fila = InfoTable.getRowCount();
                 }
             }
         }
@@ -512,16 +488,15 @@ int mesa=Integer.parseInt((String)MesaCbox.getSelectedItem());
         for (int i = 0; i < fila; i++) {
             Controlador.setCocina((int) InfoTable.getValueAt(i, 0), cocina);
         }
-       
+
         DefaultTableModel dm = (DefaultTableModel) InfoTable.getModel();
-        for (int i =InfoTable.getRowCount() - 1; i >= 0; i--) {
-    dm.removeRow(i);
-}
-        
-        Controlador.time=Controlador.Tiempo();
-        
-        
-        
+        for (int i = InfoTable.getRowCount() - 1; i >= 0; i--) {
+            dm.removeRow(i);
+        }
+
+        Controlador.time = Controlador.Tiempo();
+
+
     }//GEN-LAST:event_SalirMenuButtonActionPerformed
 
     private void CamareroCboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CamareroCboxActionPerformed
@@ -559,9 +534,9 @@ int mesa=Integer.parseInt((String)MesaCbox.getSelectedItem());
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    Controlador c=null;
-                    Cocina co=null;
-                    new TomarPedidos(c,co).setVisible(true);
+                    Controlador c = null;
+                    Cocina co = null;
+                    new TomarPedidos(c, co).setVisible(true);
                 } catch (IOException ex) {
                     Logger.getLogger(TomarPedidos.class.getName()).log(Level.SEVERE, null, ex);
                 }

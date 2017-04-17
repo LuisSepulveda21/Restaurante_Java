@@ -8,7 +8,6 @@ package Vista;
 import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 import javax.swing.JTable;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingWorker;
 import javax.swing.table.DefaultTableModel;
@@ -18,57 +17,44 @@ import javax.swing.table.DefaultTableModel;
  * @author Luis Sepulveda
  */
 public class ProgressBar extends SwingWorker<Integer, String> {
-    
-    
+
     private JLabel label;
     private JProgressBar jpbar;
     private JTextField txtfield;
     private JTable jtable;
-    
-    
-    
-    
+
     @Override
-    protected Integer doInBackground() throws Exception{
-        
+    protected Integer doInBackground() throws Exception {
+
         getLabel().setVisible(true);
         getJpbar().setIndeterminate(true);
-        
-        
-        try{
-        
+
+        try {
+
             for (int i = 0; i < 3; i++) {
-                getTxtField().setText("Proceso en: "+i+"\n");
+                getTxtField().setText("Proceso en: " + i + "\n");
                 Thread.sleep(1000);
             }
-            
+
             DefaultTableModel model = (DefaultTableModel) getJtable().getModel();
 
+            model.removeRow(getJtable().getSelectedRow());
+            getTxtField().setText("");
 
-
-
-
-        model.removeRow(getJtable().getSelectedRow());
-        getTxtField().setText("");
-        
-        
+        } catch (Exception e) {
+            System.out.println("error" + e);
         }
-        
-        catch(Exception e){
-        System.out.println("error"+e);
-        }
-        
-        
+
         getLabel().setVisible(false);
         getJpbar().setIndeterminate(false);
         return 0;
     }
 
-    public ProgressBar(JLabel label, JProgressBar jpbar, JTextField txtfield,JTable jtable) {
+    public ProgressBar(JLabel label, JProgressBar jpbar, JTextField txtfield, JTable jtable) {
         this.label = label;
         this.jpbar = jpbar;
         this.txtfield = txtfield;
-        this.jtable=jtable;
+        this.jtable = jtable;
     }
 
     /**
@@ -107,10 +93,10 @@ public class ProgressBar extends SwingWorker<Integer, String> {
     }
 
     /**
-   
+     *
      */
     public void setTxtfield(JTextField txtfield) {
-        this.txtfield=txtfield;
+        this.txtfield = txtfield;
     }
 
     /**
@@ -126,5 +112,5 @@ public class ProgressBar extends SwingWorker<Integer, String> {
     public void setJtable(JTable jtable) {
         this.jtable = jtable;
     }
-    
+
 }

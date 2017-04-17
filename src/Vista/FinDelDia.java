@@ -6,7 +6,6 @@
 package Vista;
 
 import Controlador.Controlador;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -18,10 +17,11 @@ public class FinDelDia extends javax.swing.JFrame {
      * Creates new form FinDelDia
      */
     private Controlador Controlador;
+
     public FinDelDia(Controlador Controlador) {
-        this.Controlador=Controlador;
+        this.Controlador = Controlador;
         initComponents();
-        
+
     }
 
     /**
@@ -53,47 +53,44 @@ public class FinDelDia extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(397, 390));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 22)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Fin del dia");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(138, 11, 101, 26);
+        jLabel1.setBounds(138, 11, 120, 28);
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("Total de ventas:");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(10, 74, 100, 16);
 
-        VentasLabel.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
-        VentasLabel.setForeground(new java.awt.Color(255, 255, 255));
+        VentasLabel.setFont(new java.awt.Font("Trebuchet MS", 0, 15)); // NOI18N
         VentasLabel.setText("jLabel3");
         getContentPane().add(VentasLabel);
-        VentasLabel.setBounds(37, 95, 60, 20);
+        VentasLabel.setBounds(10, 90, 60, 20);
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Plato mas vendido:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 299, 120, 16);
+        jLabel4.setBounds(10, 240, 120, 16);
 
-        PlatoLabel.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        PlatoLabel.setForeground(new java.awt.Color(255, 255, 255));
+        PlatoLabel.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         PlatoLabel.setText("jLabel5");
         getContentPane().add(PlatoLabel);
-        PlatoLabel.setBounds(30, 320, 330, 19);
+        PlatoLabel.setBounds(10, 260, 330, 18);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("Empleado del mes:");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(10, 142, 120, 16);
 
-        CamareroLabel.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
-        CamareroLabel.setForeground(new java.awt.Color(255, 255, 255));
+        CamareroLabel.setFont(new java.awt.Font("Trebuchet MS", 0, 15)); // NOI18N
         CamareroLabel.setText("jLabel7");
         getContentPane().add(CamareroLabel);
-        CamareroLabel.setBounds(29, 168, 60, 20);
+        CamareroLabel.setBounds(10, 160, 60, 19);
 
         FinMesaTable.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
         FinMesaTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -117,33 +114,31 @@ public class FinDelDia extends javax.swing.JFrame {
         jScrollPane3.setViewportView(FinMesaTable);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(124, 41, 248, 185);
+        jScrollPane3.setBounds(150, 60, 210, 140);
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
         jLabel5.setText("Plato menos vendido:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 245, 130, 16);
+        jLabel5.setBounds(10, 200, 130, 16);
 
-        MenosVendidoLabel.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        MenosVendidoLabel.setForeground(new java.awt.Color(255, 255, 255));
+        MenosVendidoLabel.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         MenosVendidoLabel.setText("jLabel8");
         getContentPane().add(MenosVendidoLabel);
-        MenosVendidoLabel.setBounds(30, 266, 340, 20);
+        MenosVendidoLabel.setBounds(10, 220, 340, 20);
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Alimentos agotados:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 346, 120, 16);
+        jLabel3.setBounds(10, 280, 120, 16);
 
-        AliLabel.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        AliLabel.setForeground(new java.awt.Color(255, 255, 255));
+        AliLabel.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         AliLabel.setText("jLabel7");
         getContentPane().add(AliLabel);
-        AliLabel.setBounds(156, 346, 210, 19);
+        AliLabel.setBounds(10, 300, 340, 18);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dark-wood-background-3_opt.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/depositphotos_23928845-stock-photo-green-pastel-background-design.jpg"))); // NOI18N
         getContentPane().add(jLabel7);
         jLabel7.setBounds(-6, -6, 400, 390);
 
@@ -180,7 +175,7 @@ public class FinDelDia extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Controlador c=null;
+                Controlador c = null;
                 new FinDelDia(c).setVisible(true);
             }
         });

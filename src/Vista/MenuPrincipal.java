@@ -18,25 +18,24 @@ import javax.swing.table.DefaultTableModel;
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 
-    
     private Controlador Controlador;
     private TomarPedidos TomarPedidos;
     public Cocina cocina;
     public Aprovisionamiento Aprovisionamiento;
     public CreacionPlatos CreacionPlatos;
     public FinDelDia FinDelDia;
-    
+
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() throws IOException {
-        Controlador=new Controlador();
-        cocina=new Cocina(Controlador);
-        TomarPedidos=new TomarPedidos(Controlador,cocina);
-        CreacionPlatos=new CreacionPlatos(Controlador);
-        Aprovisionamiento=new Aprovisionamiento(Controlador,CreacionPlatos);
-FinDelDia=new FinDelDia(Controlador);
-        
+        Controlador = new Controlador();
+        cocina = new Cocina(Controlador);
+        TomarPedidos = new TomarPedidos(Controlador, cocina);
+        CreacionPlatos = new CreacionPlatos(Controlador);
+        Aprovisionamiento = new Aprovisionamiento(Controlador, CreacionPlatos);
+        FinDelDia = new FinDelDia(Controlador);
+
         initComponents();
     }
 
@@ -59,26 +58,35 @@ FinDelDia=new FinDelDia(Controlador);
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(380, 500));
+        setMinimumSize(new java.awt.Dimension(440, 580));
         getContentPane().setLayout(null);
 
-        CamareroButton.setBackground(new java.awt.Color(204, 204, 204));
-        CamareroButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconflat1.png"))); // NOI18N
-        CamareroButton.setOpaque(false);
+        CamareroButton.setBackground(new java.awt.Color(0, 130, 137));
+        CamareroButton.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
+        CamareroButton.setForeground(new java.awt.Color(255, 255, 255));
+        CamareroButton.setBorder(null);
+        CamareroButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/rsz_waiter-128.png"))); // NOI18N
+        CamareroButton.setText("TomarPedidos");
+        CamareroButton.setBorderPainted(false);
+        CamareroButton.setFocusPainted(false);
         CamareroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CamareroButtonActionPerformed(evt);
             }
         });
         getContentPane().add(CamareroButton);
-        CamareroButton.setBounds(20, 110, 290, 50);
+        CamareroButton.setBounds(20, 90, 380, 80);
 
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 35)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Gloucester MT Extra Condensed", 0, 44)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Sistema de Control");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/piccolo-logo.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 20, 370, 70);
+        jLabel3.setBounds(130, 20, 430, 70);
 
+        jButton2.setBackground(new java.awt.Color(255, 117, 56));
+        jButton2.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/rsz_11492424329_chef-2.png"))); // NOI18N
         jButton2.setText("cocina");
         jButton2.setOpaque(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -87,8 +95,12 @@ FinDelDia=new FinDelDia(Controlador);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(170, 240, 140, 60);
+        jButton2.setBounds(220, 270, 180, 80);
 
+        jButton4.setBackground(new java.awt.Color(157, 84, 156));
+        jButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grafico.png"))); // NOI18N
         jButton4.setText("Fin del dia");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,18 +108,26 @@ FinDelDia=new FinDelDia(Controlador);
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(20, 390, 290, 50);
+        jButton4.setBounds(20, 450, 380, 80);
 
-        jButton1.setText("aprovisionamiento");
+        jButton1.setBackground(new java.awt.Color(255, 83, 73));
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/rsz_1492424021_vegan_food_meal_dinner_lunch_restaurant_vegetables.png"))); // NOI18N
+        jButton1.setText("Aprovisionamiento");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(20, 170, 290, 60);
+        jButton1.setBounds(20, 180, 380, 80);
 
-        jButton3.setText("factura");
+        jButton3.setBackground(new java.awt.Color(165, 105, 79));
+        jButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/factura (2).png"))); // NOI18N
+        jButton3.setText("Factura");
         jButton3.setOpaque(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,8 +135,12 @@ FinDelDia=new FinDelDia(Controlador);
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(20, 240, 140, 60);
+        jButton3.setBounds(20, 270, 190, 80);
 
+        jButton6.setBackground(new java.awt.Color(28, 172, 120));
+        jButton6.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cubierta.png"))); // NOI18N
         jButton6.setText("creacion de platos");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,18 +148,18 @@ FinDelDia=new FinDelDia(Controlador);
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(20, 310, 290, 70);
+        jButton6.setBounds(20, 360, 380, 80);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/54a28c7532243d85e8f441bbeb92ffc5.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/depositphotos_23928845-stock-photo-green-pastel-background-design.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-20, -370, 800, 840);
+        jLabel1.setBounds(-110, -390, 800, 940);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try {
-            Mesa_Info mesaInfo= new Mesa_Info( Controlador);
+            Mesa_Info mesaInfo = new Mesa_Info(Controlador);
             mesaInfo.setVisible(true);
         } catch (IOException ex) {
             Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
@@ -144,63 +168,67 @@ FinDelDia=new FinDelDia(Controlador);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void CamareroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CamareroButtonActionPerformed
-      DefaultTableModel dm = (DefaultTableModel) TomarPedidos.InfoTable.getModel();
-      
-        for (int i =TomarPedidos.InfoTable.getRowCount() - 1; i >= 0; i--) {
-    dm.removeRow(i);
-}
-         
+
+        DefaultTableModel dm = (DefaultTableModel) TomarPedidos.InfoTable.getModel();
+
+        for (int i = TomarPedidos.InfoTable.getRowCount() - 1; i >= 0; i--) {
+            dm.removeRow(i);
+        }
+
         DefaultTableModel platos = (DefaultTableModel) TomarPedidos.PlatosTable.getModel();
         DefaultTableModel bebidas = (DefaultTableModel) TomarPedidos.BebidasTable.getModel();
         DefaultTableModel postres = (DefaultTableModel) TomarPedidos.PostresTable.getModel();
-        
-        Controlador.AgregarEnMenu(platos,bebidas,postres);
-        
-        
-  
-        
+
+        for (int i = TomarPedidos.BebidasTable.getRowCount() - 1; i >= 0; i--) {
+            bebidas.removeRow(i);
+        }
+
+        for (int i = TomarPedidos.PlatosTable.getRowCount() - 1; i >= 0; i--) {
+            platos.removeRow(i);
+        }
+
+        for (int i = TomarPedidos.PostresTable.getRowCount() - 1; i >= 0; i--) {
+            postres.removeRow(i);
+        }
+
+        Controlador.AgregarEnMenu(platos, bebidas, postres);
+
         TomarPedidos.setVisible(true);
-        
+
     }//GEN-LAST:event_CamareroButtonActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
-         cocina.setVisible(true);
+
+        cocina.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-  int fila=Aprovisionamiento.AlmacenTable.getRowCount();
-  DefaultTableModel model = (DefaultTableModel) Aprovisionamiento.AlmacenTable.getModel();
-        
-        for (int i =fila - 1; i >= 0; i--) {
-    model.removeRow(i);
-}
-        
+        int fila = Aprovisionamiento.AlmacenTable.getRowCount();
+        DefaultTableModel model = (DefaultTableModel) Aprovisionamiento.AlmacenTable.getModel();
+
+        for (int i = fila - 1; i >= 0; i--) {
+            model.removeRow(i);
+        }
+
         try {
             Controlador.AgregarIngredientesPlato(Aprovisionamiento);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-        
+
         Aprovisionamiento.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
 
-        
-   int fila=CreacionPlatos.IngredienteTable.getRowCount();
-  DefaultTableModel model = (DefaultTableModel) CreacionPlatos.IngredienteTable.getModel();
-        
-        for (int i =fila - 1; i >= 0; i--) {
-    model.removeRow(i);
-}
-        
-        
-        
+        int fila = CreacionPlatos.IngredienteTable.getRowCount();
+        DefaultTableModel model = (DefaultTableModel) CreacionPlatos.IngredienteTable.getModel();
+
+        for (int i = fila - 1; i >= 0; i--) {
+            model.removeRow(i);
+        }
+
         try {
             Controlador.AgregarIngredientesPlato(CreacionPlatos);
         } catch (FileNotFoundException ex) {
@@ -210,12 +238,17 @@ FinDelDia=new FinDelDia(Controlador);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        
-        DefaultTableModel model = (DefaultTableModel) FinDelDia.FinMesaTable.getModel();       
-        Controlador.FinDia(FinDelDia.VentasLabel, FinDelDia.PlatoLabel, FinDelDia.CamareroLabel,model,
-        FinDelDia.MenosVendidoLabel,FinDelDia.AliLabel);
-        
+try{
+        DefaultTableModel model = (DefaultTableModel) FinDelDia.FinMesaTable.getModel();
+        Controlador.FinDia(FinDelDia.VentasLabel, FinDelDia.PlatoLabel, FinDelDia.CamareroLabel, model,
+                FinDelDia.MenosVendidoLabel, FinDelDia.AliLabel);
+
         FinDelDia.setVisible(true);
+}
+catch(Exception ex){
+}
+
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -248,7 +281,7 @@ FinDelDia=new FinDelDia(Controlador);
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-         
+
                 try {
                     new MenuPrincipal().setVisible(true);
                 } catch (IOException ex) {

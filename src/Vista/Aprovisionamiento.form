@@ -5,7 +5,7 @@
     <Container class="javax.swing.JFrame" name="Agregar">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[430, 210]"/>
+          <Dimension value="[430, 200]"/>
         </Property>
       </Properties>
 
@@ -17,9 +17,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Century Gothic" size="13" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Unidades disponibles:"/>
           </Properties>
@@ -33,9 +30,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Century Gothic" size="13" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ingrediente:"/>
           </Properties>
@@ -95,12 +89,12 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Parkett-Fischgr&#xe4;t.jpg"/>
+              <Image iconType="3" name="/Imagenes/depositphotos_23928845-stock-photo-green-pastel-background-design.jpg"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="-6" y="-6" width="430" height="160"/>
+              <AbsoluteConstraints x="-300" y="-190" width="830" height="580"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -138,9 +132,6 @@
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Century Gothic" size="18" style="1"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sistema de registro de ingredientes"/>
       </Properties>
@@ -232,7 +223,7 @@
     <Component class="javax.swing.JLabel" name="Background1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/Parkett-Fischgr&#xe4;t.jpg"/>
+          <Image iconType="3" name="/Imagenes/depositphotos_23928845-stock-photo-green-pastel-background-design.jpg"/>
         </Property>
       </Properties>
       <Constraints>

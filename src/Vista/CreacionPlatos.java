@@ -19,24 +19,18 @@ import javax.swing.table.DefaultTableModel;
  * @author Wim
  */
 public class CreacionPlatos extends javax.swing.JFrame {
-private Controlador Controlador;
+
+    private Controlador Controlador;
 
     public CreacionPlatos(Controlador Controlador) {
-        this.Controlador=Controlador;
-      
-        
-        
-        
+        this.Controlador = Controlador;
+
         initComponents();
-        
 
-           AgregarButton.setEnabled(false);
+        AgregarButton.setEnabled(false);
         UnidadesTxtField.setEditable(false);
-          
-  
-          
-    }
 
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -174,130 +168,117 @@ private Controlador Controlador;
         getContentPane().add(PrecioTxtField);
         PrecioTxtField.setBounds(430, 70, 70, 21);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/wooden-wallpaper-6_Easy-Resize.com.jpg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/depositphotos_23928845-stock-photo-green-pastel-background-design.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 560, 320);
+        jLabel6.setBounds(-150, -40, 730, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
-     void mostrarError(String titulo, String mensaje){
+    void mostrarError(String titulo, String mensaje) {
         JOptionPane.showMessageDialog(this,
                 mensaje,
                 titulo,
                 JOptionPane.ERROR_MESSAGE);
     }
-    
-    
+
+
     private void AgregarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarButtonActionPerformed
 
         DefaultTableModel model = (DefaultTableModel) IngredienteTable.getModel();
-        
-        int unidades=parseInt(UnidadesTxtField.getText());
+
+        int unidades = parseInt(UnidadesTxtField.getText());
         int fila = IngredienteTable.getSelectedRow();
-        int numfilas=IngredienteTable.getRowCount();
-        String valor = String.valueOf(model.getValueAt(fila,1));
+        int numfilas = IngredienteTable.getRowCount();
+        String valor = String.valueOf(model.getValueAt(fila, 1));
         int num = Integer.parseInt(valor);
-        
-        
-        if (num-unidades<0) {
+
+        if (num - unidades < 0) {
             mostrarError("Error", "No se tiene esa cantidad del ingrediente en almacen");
-        }
-        else{
-        String nombre=(String)model.getValueAt(fila, 0);
+        } else {
+            String nombre = (String) model.getValueAt(fila, 0);
             try {
                 Controlador.ModificarUnidades(unidades, nombre, model, numfilas);
             } catch (IOException ex) {
                 Logger.getLogger(CreacionPlatos.class.getName()).log(Level.SEVERE, null, ex);
             }
-        
+
         }
-        
-        
-        
+
+
     }//GEN-LAST:event_AgregarButtonActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
-         int fila=IngredienteTable.getRowCount();
-  DefaultTableModel model = (DefaultTableModel) IngredienteTable.getModel();
-        
-        for (int i =fila - 1; i >= 0; i--) {
-    model.removeRow(i);
-}
-        
-        
-        
+
+        int fila = IngredienteTable.getRowCount();
+        DefaultTableModel model = (DefaultTableModel) IngredienteTable.getModel();
+
+        for (int i = fila - 1; i >= 0; i--) {
+            model.removeRow(i);
+        }
+
         try {
             Controlador.AgregarIngredientesPlato(this);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
-     void mostrarAviso(String titulo, String mensaje){
+    void mostrarAviso(String titulo, String mensaje) {
         JOptionPane.showMessageDialog(this,
                 mensaje,
                 titulo,
                 JOptionPane.PLAIN_MESSAGE);
     }
-    
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-        
-        String nombre=NombreTxtField.getText();
-        
-        String tipo=String.valueOf(TipoCbox.getSelectedItem());
-        
-        String precio= PrecioTxtField.getText();
-        
-        
-        
-        if (Controlador.ObtenerAlimento(nombre)!=null) {
+
+        String nombre = NombreTxtField.getText();
+
+        String tipo = String.valueOf(TipoCbox.getSelectedItem());
+
+        String precio = PrecioTxtField.getText();
+
+        if (Controlador.ObtenerAlimento(nombre) != null) {
             Controlador.ObtenerAlimento(nombre).setNumero();
-            mostrarAviso("Unidades agregadas","Se han agregado unidades de su platillo");
-        }
-        else{
+            mostrarAviso("Unidades agregadas", "Se han agregado unidades de su platillo");
+        } else {
             try {
-                Controlador.AgregarAlimento(tipo, precio, nombre,1);
+                Controlador.AgregarAlimento(tipo, precio, nombre, 1);
             } catch (IOException ex) {
                 Logger.getLogger(CreacionPlatos.class.getName()).log(Level.SEVERE, null, ex);
             }
-             mostrarAviso("Plato creado","Su plato ha sido creado satisfactoriamente");
+            mostrarAviso("Plato creado", "Su plato ha sido creado satisfactoriamente");
         }
-        
-        
-        
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void NombreTxtFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NombreTxtFieldKeyReleased
-        
-        if(NombreTxtField.getText().length() != 0 && PrecioTxtField.getText().length() != 0){
-        UnidadesTxtField.setEditable(true);
-        }
-        else{
-        AgregarButton.setEnabled(false);    
-        UnidadesTxtField.setEditable(false);
+
+        if (NombreTxtField.getText().length() != 0 && PrecioTxtField.getText().length() != 0) {
+            UnidadesTxtField.setEditable(true);
+        } else {
+            AgregarButton.setEnabled(false);
+            UnidadesTxtField.setEditable(false);
         }
     }//GEN-LAST:event_NombreTxtFieldKeyReleased
 
     private void PrecioTxtFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PrecioTxtFieldKeyReleased
-       if(NombreTxtField.getText().length() != 0 && PrecioTxtField.getText().length() != 0){
-        
-        UnidadesTxtField.setEditable(true);
-        }
-        else{
-        AgregarButton.setEnabled(false);
-        UnidadesTxtField.setEditable(false);
+        if (NombreTxtField.getText().length() != 0 && PrecioTxtField.getText().length() != 0) {
+
+            UnidadesTxtField.setEditable(true);
+        } else {
+            AgregarButton.setEnabled(false);
+            UnidadesTxtField.setEditable(false);
         }
     }//GEN-LAST:event_PrecioTxtFieldKeyReleased
 
     private void UnidadesTxtFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UnidadesTxtFieldKeyReleased
-        if(UnidadesTxtField.getText().length() != 0){
-        AgregarButton.setEnabled(true);
-        } 
+        if (UnidadesTxtField.getText().length() != 0) {
+            AgregarButton.setEnabled(true);
+        }
     }//GEN-LAST:event_UnidadesTxtFieldKeyReleased
 
     /**
@@ -330,7 +311,7 @@ private Controlador Controlador;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Controlador c=null;
+                Controlador c = null;
                 new CreacionPlatos(c).setVisible(true);
             }
         });
