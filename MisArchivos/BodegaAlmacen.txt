@@ -1,1 +1,3 @@
-Queso,4
+Queso,7
+Sal,6
+Manteca,12
