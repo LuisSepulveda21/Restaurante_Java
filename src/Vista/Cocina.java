@@ -86,6 +86,7 @@ public class Cocina extends javax.swing.JFrame {
         getContentPane().add(progress);
         progress.setBounds(700, 110, 130, 20);
 
+        jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
         jButton2.setText("Cocinar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

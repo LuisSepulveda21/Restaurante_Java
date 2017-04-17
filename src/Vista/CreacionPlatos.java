@@ -123,7 +123,7 @@ public class CreacionPlatos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(123, 279, 111, 23);
+        jButton2.setBounds(120, 280, 111, 23);
 
         TipoCbox.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         TipoCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Plato", "Bebida", "Postre" }));
@@ -242,6 +242,12 @@ public class CreacionPlatos extends javax.swing.JFrame {
 
         if (Controlador.ObtenerAlimento(nombre) != null) {
             Controlador.ObtenerAlimento(nombre).setNumero();
+            try {
+                Controlador.AgregarUnidadesAlimento(Controlador.ObtenerAlimento(nombre).getNombre(),1);
+            } catch (IOException ex) {
+                Logger.getLogger(CreacionPlatos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
             mostrarAviso("Unidades agregadas", "Se han agregado unidades de su platillo");
         } else {
             try {

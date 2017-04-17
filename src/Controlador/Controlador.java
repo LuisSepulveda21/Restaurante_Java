@@ -185,6 +185,12 @@ public class Controlador {
 
     }
 
+    public void AgregarUnidadesAlimento(String nombre,int unidades) throws IOException{
+    restaurante.getBodegaAlimentos().Modificar(nombre,unidades,restaurante.getAlimentos());
+    }
+    
+    
+    
     //Hace un reset de los atributos una vez se ha pedido la factura
     public void reset(Mesa m) {
 

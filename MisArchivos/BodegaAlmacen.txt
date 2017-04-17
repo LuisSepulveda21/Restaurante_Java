@@ -1,6 +1,1 @@
-Queso,2
-Arroz,2
-Trigo,16
-Sal,44
-Pan,21
-azucar,11
+Queso,4

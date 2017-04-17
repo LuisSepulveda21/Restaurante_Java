@@ -139,7 +139,7 @@ public class Almacen {
 
     }
 
-//Modifica el archivo de productos
+//Modifica el archivo de ingredientes
     public void Modificar(int unidades2, String nombre2, DefaultTableModel model, int fila) throws IOException {
 
         //Busqueda   
@@ -185,4 +185,65 @@ public class Almacen {
 
     }
 
+    //Modifica el archivo de alimentos
+    public void Modificar(String nombre2,int unidades2,MiLista Alimentos) throws IOException {
+
+        //Busqueda   
+        int bus = -1;
+        int realbus = -2;
+        int realunidades = 0;
+        //
+        try (Scanner lector = new Scanner(archivo)) {
+            while (lector.hasNextLine()) {
+                bus = bus + 1;
+
+                String linea = lector.nextLine();
+
+                String[] datos = linea.split(",");
+
+                String nombre = datos[2];
+                int unidades = parseInt(datos[3]);
+
+                //Encontro el elemento
+                if (nombre.equals(nombre2)) {
+                    realunidades = unidades + unidades2;
+                    realbus = bus;
+                }//   
+            }
+        } catch (Exception ex) {
+            System.out.println("Exception: " + ex);
+        }
+        //reescribe el archivo con las nuevas unidades
+        try (BufferedWriter AlimTxt = new BufferedWriter(new FileWriter(archivo))) {
+
+            for (int i = 0; i < Alimentos.size(); i++) {
+               
+                String tipo = Alimentos.RetornarAlimento(i).getTipo();
+                String precio = Alimentos.RetornarAlimento(i).getPrecio();
+                String nombre = Alimentos.RetornarAlimento(i).getNombre();
+                int unidades = Alimentos.RetornarAlimento(i).getNumero();
+                
+                if (i == realbus) {
+                
+                AlimTxt.write(tipo + "," + precio + "," + nombre + "," + realunidades);
+                AlimTxt.newLine();
+                } 
+                else {    
+                AlimTxt.write(tipo + "," + precio + "," + nombre + "," + unidades);
+                AlimTxt.newLine();
+                }
+
+            }
+        }
+
+    }
+    
+    
 }
+
+
+ 
+
+
+
+
